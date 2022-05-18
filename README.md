@@ -213,7 +213,7 @@ It will then ask if you want to deploy now. Say **No**. Why? In production your 
 
 You can get that secret value for `APP_KEY` from your `.env` file (or you can generate a new one using `php artisan key:generate`).
 
-Run `fly secrets set APP-KEY=the-value-of-the-secret-key`. That will stage that secret in Fly, ready to deploy it:
+Run `fly secrets set APP_KEY=the-value-of-the-secret-key`. That will stage that secret in Fly, ready to deploy it:
 
 ```
 Secrets are staged for the first deployment
