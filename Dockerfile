@@ -85,6 +85,9 @@ RUN composer update && composer install --optimize-autoloader --no-dev
 # ... and make all files owned by app, including the just added /vendor
 RUN chown -R app:app /var/www/html
 
+# Configure crontab for Supervisord to use
+RUN /usr/bin/crontab docker/crontab
+
 # move the docker-related conf files out of the app folder to where on the vm they need to be
 RUN rm -rf /etc/php8/php-fpm.conf
 RUN rm -rf /etc/php8/php-fpm.d/www.conf
