@@ -1,5 +1,7 @@
 FROM alpine:edge
 
+LABEL fly_launch_runtime="laravel"
+
 RUN apk update
 
 # add useful utilities
